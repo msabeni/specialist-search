@@ -21,7 +21,7 @@ export async function getServerSideProps() {
   const specialists = await db
     .collection("specialists")
     .find({})
-    .sort({ metacritic: 1 })
+    .sort({ last_name: 1 })
     .limit(20)
     .toArray();
 
